@@ -1,0 +1,58 @@
+.paragraph{
+	 font-size: 20px;
+}
+.out{
+   border-width:0px;
+   color: red;
+   border:none;
+   font-size: 40px;
+}
+.slider{
+  width: 210px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.slider,
+.slider::-webkit-slider-runnable-track,
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.slider::-webkit-slider-runnable-track {
+  width: 200px;
+  height: 10px;
+  background: #AAA;
+}
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  background: #4CAF50;
+  cursor: pointer;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-top: -10px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.slider::-webkit-slider-thumb::before {
+  position: absolute;
+  content: '';
+  height: 10px; /* equal to height of runnable track */
+  width: 500px; /* make this bigger than the widest range input element */
+  left: -502px; /* this should be -2px - width */
+  top: 8px; /* don't change this */
+  background: #777;
+}
+
+
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}

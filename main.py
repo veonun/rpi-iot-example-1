@@ -8,10 +8,16 @@ HTTP/1.0 200 OK
 Content-Type: text/html
 <html>
   <head>
+     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <p>Hello #%d from MicroPython!</p>
     <a href="/toggle">Click here to toggle LED hooked to pin 5</a>
+	<div id="pinForm">
+       <p class="paragraph">Choose pin value:</p>
+       <input type="range" name="pinIn" class="slider" id="pinInId"   value="1" min="1" max="5" maxlength="3" oninput="pinOutId.value = pinInId.value">
+       <input type="text" name="pinOut" id="pinOutId" class="out"></input>
+    </div>
   </body>
 </html>
 """
